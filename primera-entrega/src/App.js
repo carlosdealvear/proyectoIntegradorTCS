@@ -6,5 +6,4 @@ function App() {
     <p> React </p>  
   );
 }
-
 export default App;
