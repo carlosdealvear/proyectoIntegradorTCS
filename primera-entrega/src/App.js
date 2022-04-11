@@ -16,7 +16,7 @@ function App() {
           
           <div className="container-fluid">
 
-            <h3 className="h3"> Rick and Morty</h3>
+            <h3 className="h3"> Top Artists</h3>
               <CharactersRyM />            
 
           </div>

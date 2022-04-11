@@ -16,18 +16,20 @@ class CharactersRyM extends Component{
         }
     }
 
-    //Pedir datos a la API y guardarlos en el estado
     componentDidMount(){
-        let url ='https://api.deezer.com/chart/0/artists&top?limit=10';
+        let url ='https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=10';
         fetch(url)
             .then(response => response.json())
-            .then( data => this.setState(
-                { 
-                    artist:data.results,
-                    artistBkp: data.results,
-                    nextPage:data.info.next,
-                }, () => console.log(this.state.artist)
-            ))
+            .then( data => console.log(data)
+                
+            //     this.setState(
+            //     { 
+            //         artist:data.results,
+            //         artistBkp: data.results,
+            //         nextPage:data.info.next,
+            //     }, () => console.log(data)
+            // ))
+            )
             .catch( error => console.log(error))
     }
 
