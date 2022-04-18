@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from './components/Sidebar/Sidebar';
 import Topbar from './components/Topbar/Topbar';
 import CardComponents from './components/CardComponents/CardComponents';
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
