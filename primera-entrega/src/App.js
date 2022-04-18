@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './components/Sidebar/Sidebar';
 import Topbar from './components/Topbar/Topbar';
-import CharactersRyM from './components/CharactersRyM/CharactersRyM';
+import CardComponents from './components/CardComponents/CardComponents';
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
           
           <div className="container-fluid">
 
-            <h3 className="h3"> Top Artists</h3>
-              <CharactersRyM />            
+            <h3 className="h3"> Top Tracks</h3>
+              <CardComponents />            
 
           </div>
         </div>
