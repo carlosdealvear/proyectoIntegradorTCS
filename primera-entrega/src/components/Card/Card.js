@@ -26,7 +26,7 @@ viewMore(){
     render(){
         console.log(this.props);
         return(
-            <article className="tarjeta">
+            <article className={`${this.props.orientacion}`}>
                 <img src={this.props.characterInfo.album.cover_medium} alt={this.props.characterInfo.album.cover_medium} />
                 <h3>{this.props.characterInfo.album.title}</h3>
                 <p>Artist: {this.props.characterInfo.artist.name}</p>

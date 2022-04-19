@@ -13,6 +13,7 @@ class CardComponents extends Component{
             pagina: 1,
            cargando: false,
            text:'fas fa-align-justify',
+           orientacion: "tarjeta-columna",
         }
     }
 
@@ -67,18 +68,32 @@ class CardComponents extends Component{
     }
     
 
-            
+    orientacion() {
+        if (this.state.orientacion === "tarjeta-columna") {
+            this.setState({
+                orientacion: "tarjeta-fila",
+            })
+        }
+        else {
+            this.setState({
+                orientacion: "tarjeta-columna",
+            })
+        }
+        
+
+    }      
     render(){
         // console.log(this.state.Track);
         return(
             <React.Fragment>    
                 <button type="button" onClick={ ()=>this.cargarMas()}>Cargar más</button>
-                <button type="button" onClick={()=>this.reset()}> Resetar borrados</button>
+                <button type="button" onClick={()=>this.reset()}>Resetear borrados</button>
+                <button type="button" onClick={()=>this.orientacion()}>Cambiar Orientacion</button>
                 <section className="card-wrapper">    
                     { 
                         this.state.track.length === 0 ?
                         <p>Cargando...</p> :
-                        this.state.track.map( (track, idx) => <Card key={idx} characterInfo={track} borrar={(pepe)=>this.borrarTarjeta(pepe)}/>)
+                        this.state.track.map( (track, idx) => <Card key={idx} characterInfo={track} borrar={(pepe)=>this.borrarTarjeta(pepe)} orientacion={this.state.orientacion}/>)
                     }
                 </section>
             </React.Fragment>

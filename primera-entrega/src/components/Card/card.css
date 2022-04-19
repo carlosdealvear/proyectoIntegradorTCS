@@ -1,13 +1,30 @@
-.tarjeta{
-    width: 300px;
+.tarjeta-columna{
+    width: 20%;
     margin-bottom: 30px;
     padding: 10px;
     border: 1px solid #ccc;
 }
 
-.tarjeta img{
+.tarjeta-columna img{
     width: 100%;
 }
+
+.tarjeta-fila{
+    width: 98%;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    max-height: 300px;
+    
+}
+
+.tarjeta-fila img{
+    width: 300px;
+
+}
+
 .delete{
     color: red;
     display: inline-block;
