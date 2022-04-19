@@ -34,3 +34,10 @@
     border: 1px solid #aaa;
     cursor: pointer;
 }
+
+.cardShow {
+    display: block;
+}
+.cardHide {
+    display: none;
+}

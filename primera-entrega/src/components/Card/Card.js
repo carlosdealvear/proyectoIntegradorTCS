@@ -5,7 +5,8 @@ class Card extends Component{
     constructor(props){
         super(props);
         this.state ={
-            
+            text: "ver más", 
+            viewMore: false,            
         }
     }
 
@@ -28,11 +29,18 @@ viewMore(){
         return(
             <article className={`${this.props.orientacion}`}>
                 <img src={this.props.characterInfo.album.cover_medium} alt={this.props.characterInfo.album.cover_medium} />
-                <h3>{this.props.characterInfo.album.title}</h3>
+                <h3>{this.props.characterInfo.title}</h3>
                 <p>Artist: {this.props.characterInfo.artist.name}</p>
+                
+                <section className={`${this.state.viewMore ? 'cardShow' : 'cardHide'}`}>
+                    <p>Album: {this.props.characterInfo.album.title}</p>
+                    <p>hola</p>
+                    <p>hola</p>
+                </section>
+                <button className='more' onClick={() => this.viewMore()}>{this.state.text}</button>
+                <br></br>
                 <p className="delete" onClick={()=>this.props.borrar(this.props.characterInfo.id)}>Borrar</p>
-                <p className='more' onClick={() => this.viewMore()}>{this.state.text}</p>
-                <section className={`${this.state.viewMore ? 'cardShow' : 'cardHide'}`}></section>
+                
             </article>
         ) 
     }
