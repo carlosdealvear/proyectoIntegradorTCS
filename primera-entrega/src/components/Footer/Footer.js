@@ -11,9 +11,9 @@ class Footer extends Component{
         return(
             <footer>
                 <ul className="footer-team">
-                    <li>Carlos Alvear</li>
                     <li>Tomas Habib</li>
-                    <li>Segundo Utariz</li>
+                    <li>Carlos de Alvear</li>
+                    <li>Segundo Ustariz</li>
                 </ul>
             </footer>
         )

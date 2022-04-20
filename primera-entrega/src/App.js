@@ -18,7 +18,9 @@ function App() {
           <div className="container-fluid">
 
             <h3 className="h3"> Top Tracks</h3>
-              <CardComponents />            
+              <CardComponents />
+              
+              <Footer />           
 
           </div>
         </div>
