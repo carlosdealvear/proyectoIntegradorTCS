@@ -34,8 +34,8 @@ viewMore(){
                 
                 <section className={`${this.state.viewMore ? 'cardShow' : 'cardHide'}`}>
                     <p>Album: {this.props.characterInfo.album.title}</p>
-                    <p>hola</p>
-                    <p>hola</p>
+                    <p>Track List: {this.props.characterInfo.album.tracklist}</p>
+                    <p>ID: {this.props.characterInfo.album.id}</p>
                 </section>
                 <button className='more' onClick={() => this.viewMore()}>{this.state.text}</button>
                 <br></br>
