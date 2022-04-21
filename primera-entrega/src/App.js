@@ -12,16 +12,14 @@ function App() {
       <div id="content-wrapper" className="d-flex flex-column">
         {/* <!-- Main Content --> */}
         <div id="content">
-          <Header />
+
           
-          <div className="tituloPagina">
-            <h3>Top Tracks</h3>
+
 
               <CardComponents />
               
               <Footer />           
 
-          </div>
         </div>
 
       </div>

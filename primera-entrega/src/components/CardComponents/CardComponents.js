@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Card from "../Card/Card";
+import Header from "../Header/Header";
 import './CardComponents.css';
 
 class CardComponents extends Component{
@@ -14,6 +15,7 @@ class CardComponents extends Component{
            cargando: false,
            text:'fas fa-align-justify',
            orientacion: "tarjeta-columna",
+           tracksIniciales: []
         }
     }
 
@@ -26,6 +28,7 @@ class CardComponents extends Component{
                 this.setState( {
                     cargando: true, 
                     track: data.data,
+                    tracksIniciales: data.data,
                     trackBkp: data.data,
                     // nextPage: data.info.next,
                 }, 
@@ -81,12 +84,22 @@ class CardComponents extends Component{
         }
         
 
-    }      
+    }
+    searchTrack(value){
+        let tracksFiltrados = this.state.tracksIniciales.filter(track=>track.title.toLowerCase().includes(value.toLowerCase()))
+        this.setState({
+            track: tracksFiltrados
+        })
+    }
+
     render(){
         // console.log(this.state.Track);
         return(
-            <React.Fragment>    
-                <button type="button" onClick={ ()=>this.cargarMas()}>Cargar más</button>
+            <React.Fragment> 
+            <Header searchTrack={(textoAFiltrar)=>this.searchTrack(textoAFiltrar)}/>   
+            <div className="tituloPagina">
+            <h3>Top Tracks</h3>
+            <button type="button" onClick={ ()=>this.cargarMas()}>Cargar más</button>
                 <button type="button" onClick={()=>this.reset()}>Resetear borrados</button>
                 <button type="button" onClick={()=>this.orientacion()}>Cambiar Orientacion</button>
                 <section className="card-wrapper">    
@@ -96,6 +109,7 @@ class CardComponents extends Component{
                         this.state.track.map( (track, idx) => <Card key={idx} characterInfo={track} borrar={(pepe)=>this.borrarTarjeta(pepe)} orientacion={this.state.orientacion}/>)
                     }
                 </section>
+            </div>  
             </React.Fragment>
         )
     }
