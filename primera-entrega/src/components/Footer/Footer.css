@@ -4,10 +4,6 @@ footer {
     flex-direction:row;
     justify-content: flex-end;
     align-content:center;
-    font-family: 'Antonio';
-    
-     
-        
 }
 
 .footer-team {
@@ -16,6 +12,8 @@ footer {
     align-content:center;
     color:white;
     list-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
 }
 
 .footer-team li{

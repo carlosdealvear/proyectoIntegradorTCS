@@ -17,13 +17,18 @@
     display: flex;
     justify-content: space-around;
     max-height: 300px;
-    
 }
 
 .tarjeta-fila img{
     width: 300px;
 
 }
+
+.more{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
 
 .delete{
     color: red;
@@ -33,6 +38,8 @@
     border-radius: 4px;
     border: 1px solid #aaa;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
 }
 
 .cardShow {
