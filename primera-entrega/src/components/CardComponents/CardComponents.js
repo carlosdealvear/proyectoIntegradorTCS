@@ -20,7 +20,7 @@ class CardComponents extends Component{
     }
 
     componentDidMount(){
-        let url ='https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&top?limit=10 ';
+        let url ='https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&top?limit=20 ';
         fetch(url)
             .then(response => response.json())
             .then( data => {

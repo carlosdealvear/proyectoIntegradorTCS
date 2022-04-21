@@ -17,6 +17,7 @@ class Header extends Component {
         this.setState({
             valor: cambios.target.value
         }, () => this.props.searchTrack(this.state.valor))
+        
     }
     render(){
     
