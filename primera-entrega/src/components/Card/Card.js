@@ -5,7 +5,7 @@ class Card extends Component{
     constructor(props){
         super(props);
         this.state ={
-            text: "ver más", 
+            text: "Ver más", 
             viewMore: false,            
         }
     }
@@ -13,12 +13,12 @@ class Card extends Component{
 viewMore(){
     if(this.state.viewMore){
         this.setState({
-            text: 'ver más',
+            text: 'Ver más',
             viewMore: false,
         })
     }else{
         this.setState({
-            text: 'ver menos',
+            text: 'Ver menos',
             viewMore: true,
         });
         }

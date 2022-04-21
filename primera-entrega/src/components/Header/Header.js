@@ -17,7 +17,7 @@ class Header extends Component {
                 <h1 className="nombreHeader"> TCS Music</h1>
                 <section className="infoHeader">
                 
-                    <input className="buscador" type="text" name="search" id="" placeholder="Buscar " onChange={(evento)=>this.controlarCambio(evento)} value={`${this.state.valor}`}/>
+                    <input className="buscador" type="text" name="search" id="" placeholder="Buscar"/>
                     <button className="botonbuscador"type="submit" ><i />Buscar</button>
                     
                 </section>

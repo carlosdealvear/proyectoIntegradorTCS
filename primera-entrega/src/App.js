@@ -14,9 +14,9 @@ function App() {
         <div id="content">
           <Header />
           
-          <div className="container-fluid">
+          <div className="tituloPagina">
+            <h3>Top Tracks</h3>
 
-            <h3 className="h3"> Top Tracks</h3>
               <CardComponents />
               
               <Footer />           
